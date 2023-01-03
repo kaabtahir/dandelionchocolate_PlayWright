@@ -4,7 +4,10 @@
   "description": "This project is example test project for ecommerce webiste testing using playwright",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "allure:generate": "npx allure generate ./allure-results --clean",
+    "allure:open": "npx allure open ./allure-report",
+    "test": "npx playwright test || :",
+    "posttest": "npm run allure:generate"
   },
   "author": "Kaab",
   "license": "ISC",
