@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jan 03 16:22:13 PKT 2023","Tue Jan 03 16:22:21 PKT 2023","8570","","tests\github-search.test.ts","Home Page","","","should verify the title of the page",""
