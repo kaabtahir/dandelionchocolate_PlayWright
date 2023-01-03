@@ -2,9 +2,9 @@ name: ci
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -33,8 +33,8 @@ jobs:
       if: always()
       continue-on-error: true
       with:
-        ref: gh-pages
-        path: gh-pages
+        ref: allure
+        path: allure
     
     - name: Test marketplace action
       uses: simple-elf/allure-report-action@master
@@ -52,7 +52,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v2
       env:
         PERSONAL_TOKEN: ${{ secrets.ALLURE_SECRET }}
-        PUBLISH_BRANCH: gh-pages
+        PUBLISH_BRANCH: allure
         PUBLISH_DIR: allure-history
 
 
